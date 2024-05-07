@@ -43,4 +43,4 @@ public class CourseOpening {
     public String toString() {
         return this.courseCode + "|" + this.academicYear + "|" + this.semester + "| " + this.lecturerList;
     }
-} 
+}    
