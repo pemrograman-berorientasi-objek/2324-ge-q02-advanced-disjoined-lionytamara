@@ -164,9 +164,16 @@ public class Driver1 {
                             }
                         }
                     }
+
+                }else if (command.equals("find-the-best-student")) {
+                    String academicYear = tokens[1];
+                    String semester = tokens[2];
+                    Map<String, Double> studentGrades = new HashMap<>();
+                    for (Enrollment enrollment : enrollments) {
                 }
             }
         }
+    }
 
         // Output the required information
         for (Lecturer lecturer : lecturers) {
