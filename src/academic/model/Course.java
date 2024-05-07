@@ -41,10 +41,5 @@ public class Course {
     public String toString() {
         return this.id + "|" + this.name + "|" + this.credit + "|" + this.passingGrade;
     }
-}    
-
-
-
-
-
+}
 

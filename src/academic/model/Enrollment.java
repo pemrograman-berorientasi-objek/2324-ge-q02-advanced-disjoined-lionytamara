@@ -45,6 +45,4 @@ public class Enrollment {
     public String toString() {
         return this.courseId + " | " + this.studentId + " | " + this.academicYear + " | " + this.semester + " | " + this.grade;
     }
-
-}      
-
+}

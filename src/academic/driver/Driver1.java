@@ -16,7 +16,7 @@ import academic.model.Lecturer;
 
 /**
  * @author 12S22019 Liony Tamara Lewinsky
- * @author 12S22029 Jeremy Samosir
+ * @author 12S22029 Jeremy samosir
  */
 public class Driver1 {
     public static void main(String[] args) {
@@ -174,7 +174,6 @@ public class Driver1 {
                 }
             }
         }
-        
 
         // Output the required information
         for (Lecturer lecturer : lecturers) {
