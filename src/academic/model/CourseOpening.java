@@ -44,3 +44,4 @@ public class CourseOpening {
         return this.courseCode + "|" + this.academicYear + "|" + this.semester + "| " + this.lecturerList;
     }
 }    
+
