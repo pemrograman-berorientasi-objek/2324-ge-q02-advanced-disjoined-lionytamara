@@ -35,4 +35,4 @@ public class Lecturer {
     public String toString() {
         return this.id + " | " + this.name + " | " + this.initial + " | " + this.email + " | " + this.studyProgram;
     }
-}  
+}                  

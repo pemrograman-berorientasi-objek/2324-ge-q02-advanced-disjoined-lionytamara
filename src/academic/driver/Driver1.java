@@ -165,15 +165,38 @@ public class Driver1 {
                         }
                     }
 
-                }else if (command.equals("find-the-best-student")) {
-                    String academicYear = tokens[1];
-                    String semester = tokens[2];
-                    Map<String, Double> studentGrades = new HashMap<>();
-                    for (Enrollment enrollment : enrollments) {
-                }
+                        } else if (command.equals("find-the-best-student")) {
+                            String academicYear = tokens[1];
+                            String semester = tokens[2];
+        
+                            Map<String, Double> studentGrades = new HashMap<>();
+                            for (Enrollment enrollment : enrollments) {
+                                if (enrollment.getAcademicYear().equals(academicYear) && enrollment.getSemester().equals(semester) && !enrollment.getGrade().equals("None")) {
+                                    String studentId = enrollment.getStudentId();
+                                    double gradePoint = calculateGradePoints(enrollment.getGrade());
+                                    if (studentGrades.containsKey(studentId)) {
+                                        double currentGrade = studentGrades.get(studentId);
+                                        if (gradePoint > currentGrade) {
+                                            studentGrades.put(studentId, gradePoint);
+                                        }
+                                    } else {
+                                        studentGrades.put(studentId, gradePoint);
+                                    }
+                                }
+                            }
+        
+                            double highestGrade = 0;
+                            String bestStudentId = null;
+                            for (Map.Entry<String, Double> entry : studentGrades.entrySet()) {
+                                if (entry.getValue() > highestGrade) {
+                                    highestGrade = entry.getValue();
+                                    bestStudentId = entry.getKey();
+                                }
+                            }
+                } 
             }
         }
-    }
+
 
         // Output the required information
         for (Lecturer lecturer : lecturers) {
